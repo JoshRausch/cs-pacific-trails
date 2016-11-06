@@ -31,6 +31,7 @@ nav {
 
 nav a {
     text-decoration: none;
+    transition: color 3s ease-out;
 }
 
 nav ul {
@@ -93,6 +94,7 @@ footer {
     padding: 20px;
     background-color: #ffffff;
     margin-left: 190px;
+    clear: both
 }
 
 table {
@@ -101,16 +103,16 @@ table {
     border-spacing: 0;
 }
 
-td  {
+td {
     padding: 5px;
     border: 1px solid #3399cc;
     text-align: center;
 }
 
-
-th {padding: 5px;
+th {
+    padding: 5px;
     border: 1px solid #3399cc;
-    }
+}
 
 .text {
     text-align: left;
@@ -122,6 +124,24 @@ th {padding: 5px;
 
 tr:nth-of-type(even) {
     background-color: #f5fafc;
+}
+
+label {
+    float: left;
+    display: block;
+    text-align: right;
+    width: 120px;
+    padding-right: 10px;
+}
+
+input,
+textarea {
+    display: block;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    margin-left: 130px;
 }
 
 #wrapper {
@@ -165,6 +185,61 @@ tr:nth-of-type(even) {
 #mobile {
     display: none;
 }
+
+video, embed {
+    float: right;
+    padding-left: 20px;
+    width: 320px;
+    height: 240px;
+}
+
+#gallery {
+            position: relative;
+            height: 200px;
+        }
+        
+        #gallery ul {
+            list-style-type: none;
+            width: 300px;
+        }
+        
+        #gallery li {
+            display: inline;
+            float: left;
+            padding: 10px;
+        }
+        
+        #gallery img {
+            border-style: none;
+        }
+        
+        #gallery a {
+            text-decoration: none;
+            font-style: italic;
+            color: #333;
+        }
+        
+        #gallery span {
+            position: absolute;
+            left: -1000px;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
+        }
+        
+        #gallery a:hover span {
+            position: absolute;
+            top: 16px;
+            left: 320px;
+            text-align: center;
+            opacity: 1;
+        }
+        
+        figure {
+            position: absolute;
+            left: 280px;
+            text-align: center;
+            
+        }
 
 @media only screen and (max-width: 64em) {
     body {
@@ -238,6 +313,23 @@ tr:nth-of-type(even) {
     nav a {
         display: block;
     }
+    label {
+        float: none;
+        text-align: left;
+    }
+    input[type="submit"] {
+        margin-left: 0;
+    }
+    
+    video, embed {
+        float: left;
+        padding-left: 10px;
+    }
+    
+    p {
+        clear: left;
+    }
+    
     #homehero {
         background-image: none;
         height: 0;
@@ -255,5 +347,11 @@ tr:nth-of-type(even) {
     }
     #desktop {
         display: none;
+    }
+    
+    #gallery {
+        display: none;
+        height: 0;
+            
     }
 }
